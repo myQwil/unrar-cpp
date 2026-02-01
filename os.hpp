@@ -38,9 +38,11 @@
 #endif
 
 #define WINVER _WIN32_WINNT_WINXP
+#undef _WIN32_WINNT
 #define _WIN32_WINNT _WIN32_WINNT_WINXP
 
 #if !defined(ZIPSFX)
+#undef RAR_SMP
 #define RAR_SMP
 #endif
 
@@ -78,7 +80,7 @@
 
 // Use SSE only for x86/x64, not ARM Windows.
 #if defined(_M_IX86) || defined(_M_X64)
-  #define USE_SSE
+  // #define USE_SSE
   #define SSE_ALIGNMENT 16
 #endif
 
@@ -154,7 +156,7 @@
   #if defined(__i386__) || defined(__x86_64__)
     #include <x86intrin.h>
     
-    #define USE_SSE
+    // #define USE_SSE
     #define SSE_ALIGNMENT 16
   #endif
 #endif
@@ -230,6 +232,7 @@
 
 #endif // _UNIX
 
+  #include "rartypes.hpp"
   typedef const wchar* MSGID;
 
 #ifndef SSE_ALIGNMENT // No SSE use and no special data alignment is required.
