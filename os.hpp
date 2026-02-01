@@ -50,7 +50,7 @@
 #include <prsht.h>
 #include <shlwapi.h>
 #pragma comment(lib, "Shlwapi.lib")
-#include <PowrProf.h>
+#include <powrprof.h>
 #pragma comment(lib, "PowrProf.lib")
 #include <psapi.h>
 #pragma comment(lib, "Psapi.lib") // For GetProcessMemoryInfo().
@@ -60,13 +60,13 @@
 #include <wincrypt.h>
 #include <wchar.h>
 #include <wctype.h>
-#include <Sddl.h>
+#include <sddl.h>
 #include <ntsecapi.h>
 
 
 // For WMI requests.
 #include <comdef.h>
-#include <Wbemidl.h>
+#include <wbemidl.h>
 #pragma comment(lib, "wbemuuid.lib")
 
 
